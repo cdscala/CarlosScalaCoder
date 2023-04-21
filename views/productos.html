@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <link rel="stylesheet" href="../css/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="../js/productos.js" defer></script>
+</head>
+<body>
+    <header class="cabecera">
+		<a href="../index.html">
+			<img class="company-icon" src="../assets/icons/coffee-shop-sign.svg" alt="logo sitio" width="50px" height="50px">
+		</a>
+		<nav class="cs-navbar">
+			<ul class="cs-navbar-list">
+				<li class="cs-navbar-item"><a class="cs-a" href="./home.html">Home</a></li>
+				<li class="cs-navbar-item"><a class="cs-a" href="./nosotros.html">Nosotros</a></li>
+				<li class="cs-navbar-item"><a class="cs-a" href="./servicios.html">Servicios</a></li>
+				<li class="cs-navbar-item cs-active"><a class="cs-a" href="./productos.html">Productos</a></li>
+				<li class="cs-navbar-item"><a class="cs-a" href="./contacto.html">Contacto</a></li>
+			</ul>
+		</nav>
+		<div class="burger-button-container" >
+			<div class="burger-button-plates">
+			  <div class="burger-button-plate" >
+				<svg class="burger-button-burger" version="1.1" viewBox="0 0 100 100" >
+				  <path class="burger-button-line burger-button-line1" d="M 50,65 H 70 C 70,65 75,65.198488 75,70.762712 C 75,73.779026 74.368822,78.389831 66.525424,78.389831 C 22.092231,78.389831 -18.644068,-30.508475 -18.644068,-30.508475" />
+				  <path class="burger-button-line burger-button-line2" d="M 50,35 H 70 C 70,35 81.355932,35.300135 81.355932,25.635593 C 81.355932,20.906215 78.841706,14.830508 72.881356,14.830508 C 35.648232,14.830508 -30.508475,84.322034 -30.508475,84.322034" />
+				  <path class="burger-button-line burger-button-line3" d="M 50,50 H 30 C 30,50 12.288136,47.749959 12.288136,60.169492 C 12.288136,67.738339 16.712974,73.305085 40.677966,73.305085 C 73.791674,73.305085 108.47458,-19.915254 108.47458,-19.915254" />
+				  <path class="burger-button-line burger-button-line4" d="M 50,50 H 70 C 70,50 81.779661,50.277128 81.779661,36.607372 C 81.779661,28.952694 77.941689,25 69.067797,25 C 39.95532,25 -16.949153,119.91525 -16.949153,119.91525" />
+				  <path class="burger-button-line burger-button-line5" d="M 50,65 H 30 C 30,65 17.79661,64.618439 17.79661,74.152543 C 17.79661,80.667556 25.093813,81.355932 38.559322,81.355932 C 89.504001,81.355932 135.59322,-21.186441 135.59322,-21.186441" />
+				  <path class="burger-button-line burger-button-line6" d="M 50,35 H 30 C 30,35 16.525424,35.528154 16.525424,24.152542 C 16.525424,17.535987 22.597755,13.559322 39.40678,13.559322 C 80.617882,13.559322 94.067797,111.01695 94.067797,111.01695" />
+				</svg>
+				<svg class="burger-button-x" version="1.1" viewBox="0 0 100 100">
+				  <path class="burger-button-line" d="M 34,32 L 66,68" />
+				  <path class="burger-button-line" d="M 66,32 L 34,68" />
+				</svg>
+				<svg>
+				  <defs>
+					<filter id="burger-button-gooeyness">
+					  <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur" />
+					  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="gooeyness" />
+					  <feComposite in="SourceGraphic" in2="gooeyness" operator="atop" />
+					</filter>
+				  </defs>
+				</svg>
+			  </div>
+			</div>
+		</div>
+	</header>
+
+
+
+
+    <div class="bg-primary text-white py-5">
+        <div class="container py-5">
+          <h1>
+            Los mejores productos y <br />
+            marcas en nuestra tienda
+          </h1>
+          <p>
+            Productos de moda, Precios de fábrica, Servicio de calidad
+          </p>
+          <button type="button" class="btn btn-outline-light">
+            leer más
+          </button>
+          <button type="button" class="btn btn-light shadow-0 text-primary pt-2 border border-white">
+            <span class="pt-1">Comprar ahora</span>
+          </button>
+        </div>
+      </div>
+      <!-- Jumbotron -->
+    </header>
+    <!-- Products -->
+    <section>
+      <div class="container my-5">
+        <header class="mb-4">
+          <h3>Nuevos prodctos</h3>
+        </header>
+    
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+            <div class="card w-100 my-2 shadow-2-strong">
+              <img src="../assets/img/taza1.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Taza De Cerámica - Hora De Aventura - Jake</h5>
+                <p class="card-text">$2199</p>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#!" class="btn btn-primary shadow-0 me-1">Agregar al carro</a>
+                  <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+            <div class="card w-100 my-2 shadow-2-strong">
+              <img src="../assets/img/cafetera1.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Cafetera Nespresso Essenza Mini</h5>
+                <p class="card-text">$79990</p>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#!" class="btn btn-primary shadow-0 me-1">Agregar al carro</a>
+                  <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+            <div class="card w-100 my-2 shadow-2-strong">
+              <img src="../assets/img/cafetera2.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Cafetera Express Roma Pro</h5>
+                <p class="card-text">$78617</p>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#!" class="btn btn-primary shadow-0 me-1">Agregar al carro</a>
+                  <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+            <div class="card w-100 my-2 shadow-2-strong">
+              <img src="../assets/img/filtrocafe1.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Filtro De Café De Acero Inoxidable</h5>
+                <p class="card-text">$6000</p>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#!" class="btn btn-primary shadow-0 me-1">Agregar al carro</a>
+                  <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+            <div class="card w-100 my-2 shadow-2-strong">
+              <img src="../assets/img/cafetera3.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Cafetera Chemex</h5>
+                <p class="card-text">$38000</p>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#!" class="btn btn-primary shadow-0 me-1">Agregar al carro</a>
+                  <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+            <div class="card w-100 my-2 shadow-2-strong">
+              <img src="../assets/img/decantador1.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Decantador De Café Por Goteo</h5>
+                <p class="card-text">$14999</p>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#!" class="btn btn-primary shadow-0 me-1">Agregar al carro</a>
+                  <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+            <div class="card w-100 my-2 shadow-2-strong">
+              <img src="../assets/img/cafetera4.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Cafetera Con Embolo</h5>
+                <p class="card-text">$5299</p>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#!" class="btn btn-primary shadow-0 me-1">Agregar al carro</a>
+                  <a href="#!" class="btn btn-light border icon-hover px-2 pt-2"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+            <div class="card w-100 my-2 shadow-2-strong">
+              <img src="../assets/img/taza2.webp" class="card-img-top" style="aspect-ratio: 1 / 1" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Taza De Cerámica Star Wars</h5>
+                <p class="card-text">$1899</p>
+                <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                  <a href="#!" class="btn btn-primary shadow-0 me-1">Agregar al carro</a>
+                  <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-5" style="background-color: #f5f5f5;">
+      <div class="container text-dark pt-3">
+        <header class="pt-4 pb-3">
+          <h3>Por qué elegirnos</h3>
+        </header>
+    
+        <div class="row mb-4">
+          <div class="col-lg-4 col-md-6">
+            <figure class="d-flex align-items-center mb-4">
+              <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+                <i class="fas fa-camera-retro fa-2x fa-fw text-primary floating"></i>
+              </span>
+              <figcaption class="info">
+                <h6 class="title">Precios razonables</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <figure class="d-flex align-items-center mb-4">
+              <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+                <i class="fas fa-star fa-2x fa-fw text-primary floating"></i>
+              </span>
+              <figcaption class="info">
+                <h6 class="title">Mejor calidad</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <figure class="d-flex align-items-center mb-4">
+              <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+                <i class="fas fa-plane fa-2x fa-fw text-primary floating"></i>
+              </span>
+              <figcaption class="info">
+                <h6 class="title">Envío a todo el mundo</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <figure class="d-flex align-items-center mb-4">
+              <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+                <i class="fas fa-users fa-2x fa-fw text-primary floating"></i>
+              </span>
+              <figcaption class="info">
+                <h6 class="title">Satisfacción del cliente</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <figure class="d-flex align-items-center mb-4">
+              <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+                <i class="fas fa-thumbs-up fa-2x fa-fw text-primary floating"></i>
+              </span>
+              <figcaption class="info">
+                <h6 class="title">Clientes felices</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <figure class="d-flex align-items-center mb-4">
+              <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+                <i class="fas fa-box fa-2x fa-fw text-primary floating"></i>
+              </span>
+              <figcaption class="info">
+                <h6 class="title">Miles de artículos</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-5 mb-4">
+      <div class="container text-dark">
+        <header class="mb-4">
+          <h3>Blog posts</h3>
+        </header>
+    
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <article>
+              <a href="#" class="img-fluid">
+                <img class="rounded w-100" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/posts/1.webp" style="object-fit: cover;" height="160" />
+              </a>
+              <div class="mt-2 text-muted small d-block mb-1">
+                <span>
+                  <i class="fa fa-calendar-alt fa-sm"></i>
+                  23.12.2022
+                </span>
+                <a href="#"><h6 class="text-dark">Cómo promocionar marcas</h6></a>
+                <p>Ingresando a cualquier área nueva de la ciencia</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <article>
+              <a href="#" class="img-fluid">
+                <img class="rounded w-100" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/posts/2.webp" style="object-fit: cover;" height="160" />
+              </a>
+              <div class="mt-2 text-muted small d-block mb-1">
+                <span>
+                  <i class="fa fa-calendar-alt fa-sm"></i>
+                  13.12.2022
+                </span>
+                <a href="#"><h6 class="text-dark">Cómo manejamos el envío</h6></a>
+                <p>Ingresando a cualquier área nueva de la ciencia</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <article>
+              <a href="#" class="img-fluid">
+                <img class="rounded w-100" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/posts/3.webp" style="object-fit: cover;" height="160" />
+              </a>
+              <div class="mt-2 text-muted small d-block mb-1">
+                <span>
+                  <i class="fa fa-calendar-alt fa-sm"></i>
+                  25.11.2022
+                </span>
+                <a href="#"><h6 class="text-dark">Cómo manejamos el envío</h6></a>
+                <p>Ingresando a cualquier área nueva de la ciencia</p>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <article>
+              <a href="#" class="img-fluid">
+                <img class="rounded w-100" src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/posts/4.webp" style="object-fit: cover;" height="160" />
+              </a>
+              <div class="mt-2 text-muted small d-block mb-1">
+                <span>
+                  <i class="fa fa-calendar-alt fa-sm"></i>
+                  03.09.2022
+                </span>
+                <a href="#"><h6 class="text-dark">Historia de éxito de los vendedores</h6></a>
+                <p>Ingresando a cualquier área nueva de la ciencia</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+</body>
+</html>
