@@ -116,8 +116,7 @@ section {
   height: 80vh;
   background: linear-gradient(330deg, rgb(255, 255, 255) 0%, rgb(245, 243, 243) 67%, rgba(255, 218, 136, 0.72) 91%);
 }
-
-.home-presentation {
+.home .home-presentation {
   display: flex;
   flex-direction: column;
   align-items: center;

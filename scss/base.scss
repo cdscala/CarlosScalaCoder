@@ -131,13 +131,14 @@ section {
 	gap: 3rem;
 	height: 80vh;
 	background: linear-gradient(330deg, rgba(255,255,255,1) 0%, rgba(245,243,243,1) 67%, rgba(255,218,136,0.72) 91%);
+    .home-presentation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
-.home-presentation {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
+
 .home-2 {
 	background-color: $background-color_6;
 	background-image: url("../assets/img/cafe.svg");
