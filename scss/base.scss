@@ -1,3 +1,8 @@
+$theme-colors: (
+  "primary": #ffc477,
+);
+
+
 $color_1: #1D1C1B;
 $color_2: #ffffff;
 $color_3: rgb(2,2,2);
@@ -16,8 +21,9 @@ $accordion--_button-size: 3rem;
 $accordion--_panel-padding: 0.75rem;
 $accordion--_panel-gap: 1rem;
 
-
+@import "../node_modules/bootstrap/scss/bootstrap";
 @import "https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap";
+
 @keyframes phrase2 {
 	to {
 		stroke-dashoffset: 0;
@@ -494,5 +500,14 @@ section {
 
 
 .contacto{
-    background-color: red;
+    background-color: transparent;
+    input:focus{
+        border-color:$background-color_5 ;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $background-color_4;
+    }
+    textarea:focus{
+        border-color:$background-color_5 ;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $background-color_4;
+    }
+    
 }

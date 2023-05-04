@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/cdscala/cdscala.github.io/issues"
   },
-  "homepage": "https://github.com/cdscala/cdscala.github.io#readme"
+  "homepage": "https://github.com/cdscala/cdscala.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
 }
