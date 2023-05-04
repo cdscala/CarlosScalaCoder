@@ -453,3 +453,46 @@ section {
 		}
 	}
 }
+
+
+.cs-footer{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    .cs-footer-social-links{
+        display: flex;
+        flex-direction: row;
+        gap:20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+        .cs-footer-social-icon{
+            height: 35px;
+            width: 35px;
+            transition: transform 300ms;
+            &:hover{
+                transform: scale(0.8 ,0.8);
+            }
+        }
+    }
+    .cs-footer-faq-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        a{
+            font-size: 0.75rem;
+            text-decoration: none;
+            color: #276873;
+        }
+    }
+    p{
+        text-align: center;
+    }
+}
+
+
+.contacto{
+    background-color: red;
+}

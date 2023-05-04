@@ -422,5 +422,45 @@ section {
     transition: transform 500ms 500ms, opacity 500ms 500ms;
   }
 }
+.cs-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.cs-footer .cs-footer-social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.cs-footer .cs-footer-social-links .cs-footer-social-icon {
+  height: 35px;
+  width: 35px;
+  transition: transform 300ms;
+}
+.cs-footer .cs-footer-social-links .cs-footer-social-icon:hover {
+  transform: scale(0.8, 0.8);
+}
+.cs-footer .cs-footer-faq-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cs-footer .cs-footer-faq-list a {
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: #276873;
+}
+.cs-footer p {
+  text-align: center;
+}
+
+.contacto {
+  background-color: red;
+}
 
 /*# sourceMappingURL=styles.css.map */
