@@ -1,5 +1,8 @@
 $theme-colors: (
   "primary": #ffc477,
+  "secondary": #6c757d, 
+  "light": #f8f9fa,
+  "dark": #212529,
 );
 
 
@@ -16,6 +19,7 @@ $background-color_4: #ffc477;
 $background-color_5: #fb9e25;
 $background-color_6: hsla(14, 33%, 32%, 0.4);
 $background-color_7: white;
+$button-hover-color: #C7B19E;
 
 $accordion--_button-size: 3rem;
 $accordion--_panel-padding: 0.75rem;
@@ -53,81 +57,39 @@ body {
 	padding: 0;
 	margin: 0;
 }
+main{
+    padding-top: 55px;
+}
 section {
 	padding-block: 2rem;
 }
-.onboarding {
-	height: 100vh;
-	display: flex;
+button:hover{
+    color: $button-hover-color !important;
+}
+
+.index{
+    display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-image: url("../assets/img/landing3.svg");
+    justify-content: right;
+    align-items: flex-end;
+    background-color: $background-color_6;
+	background-image: url("../assets/img/snowboard-background.jpg");
 	background-size: cover;
-	background-position: center;
-	background-color: $background-color_2;
-	background-blend-mode: soft-light;
-    .onboarding-landing-phrase {
-        min-width: 375px;
-        max-width: 800px;
-        .onboarding-landing-phrase-2 {
-            >path {
-                stroke-dasharray: 1000;
+    background-position: center;
+    height:50vh;
+    .index-title{
+        min-height: 200px;
+        width: clamp(200px, 40%, 400px);
+        .st0{
+            stroke-dasharray: 1000;
                 stroke-dashoffset: 1000;
-                animation: phrase2 5s forwards;
-            }
-        }
-    }
-    .onboarding-button {
-        margin-top: 14vh;
-        box-shadow: 0px 10px 14px -7px #276873;
-        background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
-        border-radius: 8px;
-        display: inline-block;
-        cursor: pointer;
-        color: $color_2;
-        font-family: $font-family_1;
-        font-size: 20px;
-        font-weight: bold;
-        padding: 13px 32px;
-        text-decoration: none;
-        text-shadow: 0px 1px 0px #3d768a;
-        transform: translateX(-10px);
-        &:hover {
-            background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
-            background-color: $background-color_3;
-        }
-        &:active {
-            position: relative;
-            top: 1px;
+            stroke: white;
+            stroke-width: 2px;
+            animation: phrase2 5s forwards;
         }
     }
 }
 
-.aplicacion-button {
-	box-shadow: inset 0px 1px 0px 0px #fce2c1;
-	background: linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
-	background-color: $background-color_4;
-	border-radius: 6px;
-	border: 1px solid #eeb44f;
-	display: inline-block;
-	cursor: pointer;
-	color: $color_2;
-	font-family: $font-family_1;
-	font-size: 15px;
-	font-weight: bold;
-	padding: 6px 24px;
-	text-decoration: none;
-	text-shadow: 0px 1px 0px #cc9f52;
-	&:hover {
-		background: linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
-		background-color: $background-color_5;
-	}
-	&:active {
-		position: relative;
-		top: 1px;
-	}
-}
 .home {
 	display: flex;
 	flex-direction: row;
@@ -135,13 +97,22 @@ section {
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 3rem;
-	height: 80vh;
+	height: 60vh;
 	background: linear-gradient(330deg, rgba(255,255,255,1) 0%, rgba(245,243,243,1) 67%, rgba(255,218,136,0.72) 91%);
     .home-presentation {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        .apple-store-button{
+            width: clamp(200px, 40%, 350px);
+            cursor:pointer;
+        }
+        .google-play-button{
+            width: clamp(200px, 40%, 350px);
+            cursor:pointer;
+        }
+
     }
 }
 
@@ -168,16 +139,17 @@ section {
 	list-style: none;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
+    gap:15px;
 	min-width: 500px;
 	min-height: 30px;
 	z-index: 1001;
 	.cs-navbar-item {
 		display: flex;
 		flex-direction: column;
-		width: 100%;
-		height: 100%;
+		justify-content: center;
+        align-items: center;
 		.cs-a {
             font-family: $font-family_1;
             line-height: 1.6;
@@ -189,7 +161,7 @@ section {
 			font-size: 1.2rem;
 			transition: filter .5s;
 			&:hover {
-				filter: blur(0);
+				filter: blur(0) !important;
 				color: $color_1;
 			}
 		}
@@ -408,9 +380,11 @@ section {
 	.cs-navbar-list {
 		overflow: hidden;
 		background-color: $background-color_1;
+        border: 1px $background-color_5 solid;
+        border-radius: 8px;
 		position: absolute;
-		right: 0px;
-        top:50px;
+		right: 1px;
+        top:55px;
 		list-style: none;
 		display: flex;
 		flex-direction: column;
@@ -448,6 +422,9 @@ section {
 		flex-direction: row;
 		height: 30rem;
 	}
+    .index{
+        height:80vh;
+    }
 }
 @media (prefers-reduced-motion: no-preference) {
 	.accordion-panel {
