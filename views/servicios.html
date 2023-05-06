@@ -57,38 +57,45 @@
 	</header>
 
 	<main>
-		<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-			integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-			crossorigin=""></script>
+
+		<section class="d-flex flex-column align-items-center">
+			
+			<h1 class="mb-3">Nuestras ubicaciones</h1>
+			
+			<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+				integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+				crossorigin=""></script>
 		
-		<div id ="map" style = "width:100%; height:600px;""></div>
-		<script>
-			// Creating map options
-			var mapOptions = {
-				center: [-41.1449,-71.3757],
-				zoom: 10
-			}
-			
-			// Creating a map object
-			var map = new L.map('map', mapOptions);
-			
-			// Creating a Layer object
-			var layer = new L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', 
-										{
-											maxZoom: 19,
-											attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-										}
-										).addTo(map);
-			
-			// Adding layer to the map
-			map.addLayer(layer);
-			let marker = new L.Marker([-41.1449,-71.3757]);
-			marker.addTo(map);
-			let marker2 = new L.Marker([-41.1558,-71.3928]);
-			marker2.addTo(map);
-			let marker3 = new L.Marker([-41.1354,-71.3104]);
-			marker3.addTo(map);
+			<div id ="map" style = "width:100%; height:60vh;""></div>
+			<script>
+				// Creating map options
+				var mapOptions = {
+					center: [-41.1449,-71.3757],
+					zoom: 10
+				}
+				
+				// Creating a map object
+				var map = new L.map('map', mapOptions);
+				
+				// Creating a Layer object
+				var layer = new L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', 
+											{
+												maxZoom: 19,
+												attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+											}
+											).addTo(map);
+				
+				// Adding layer to the map
+				map.addLayer(layer);
+				let marker = new L.Marker([-41.1690,-71.4360]);
+				marker.addTo(map);
+				let marker2 = new L.Marker([-41.1694,-71.4864]);
+				marker2.addTo(map);
+				let marker3 = new L.Marker([-41.1352,-71.3104]);
+				marker3.addTo(map);
 			</script>
+		</section>
+		
 	</main>
 
 	<footer-component/>

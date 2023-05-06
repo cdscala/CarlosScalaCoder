@@ -196,6 +196,7 @@ button:hover{
 	position: relative;
 	height: 50px;
 	width: 60px;
+    z-index: 1001;
     .burger-button-burger {
         position: absolute;
         filter: url(#gooeyness);
