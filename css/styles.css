@@ -10841,9 +10841,12 @@ button:hover {
     transition: transform 500ms;
   }
   .cs-navbar-list .cs-a {
+    width: 100%;
+    height: 100%;
     font-family: "Oxygen", sans-serif;
     line-height: 1.6;
     font-size: 1.125rem;
+    text-align: center;
     filter: blur(0) !important;
     color: #1D1C1B;
     font-weight: 400;
