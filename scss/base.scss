@@ -1,6 +1,7 @@
 $theme-colors: (
   "primary": #ffc477,
   "secondary": #6c757d, 
+  "info": #fddaab,
   "light": #f8f9fa,
   "dark": #212529,
 );
@@ -26,11 +27,20 @@ $accordion--_panel-gap: 1rem;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap";
+@import "https://fonts.googleapis.com/css?family=Dosis:300,400,700,800";
 
 @keyframes phrase2 {
 	to {
 		stroke-dashoffset: 0;
 	}
+}
+@keyframes spin {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
 * {
 	box-sizing: border-box;
@@ -75,11 +85,11 @@ button:hover{
     height:50vh;
     .index-title{
         min-height: 200px;
-        width: clamp(200px, 40%, 400px);
+        width: clamp(300px, 40%, 500px);
         .st0{
             stroke-dasharray: 1000;
                 stroke-dashoffset: 1000;
-            stroke: white;
+            stroke: $background-color_4;
             stroke-width: 2px;
             animation: phrase2 5s forwards;
         }
@@ -99,12 +109,14 @@ button:hover{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        .apple-store-button{
+        a{
             width: clamp(200px, 40%, 350px);
+        }
+        .apple-store-button{
+            
             cursor:pointer;
         }
         .google-play-button{
-            width: clamp(200px, 40%, 350px);
             cursor:pointer;
         }
     }
@@ -116,6 +128,7 @@ button:hover{
 	background-size: cover;
 }
 .cabecera {
+    border-bottom: 1px $background-color_6 solid;
 	position: fixed;
 	background-color: $background-color_7;
 	display: flex;
@@ -463,6 +476,12 @@ button:hover{
             text-decoration: none;
             color: #276873;
         }
+        button{
+            border:none;
+            font-size: 0.75rem;
+            text-decoration: none;
+            color: #276873;
+        }
     }
     p{
         text-align: center;
@@ -482,3 +501,87 @@ button:hover{
     }
     
 }
+
+@mixin make-container($padding-x: $container-padding-x) {
+    width: 100%;
+    height: 100vh;
+    background-color: $color_1;
+    color:#ffc477;
+  }
+  
+  .cs-container {
+    @include make-container();
+    h1{
+        text-align: center;
+        color: #fff;
+        font-family: "Dosis", sans-serif;
+        font-size: clamp(6rem, 7vw + 2rem, 15rem);
+        margin-bottom: 0px;
+        font-weight: 800;
+    }
+    h2{
+        text-align: center;
+        font-size: 19px;
+        line-height: 23px;
+        max-width: 330px;
+        margin: 0px auto 30px auto;
+        font-family: "Dosis", sans-serif;
+        font-weight: 400;
+    }
+    h3{
+        text-align: center;
+        color: #fff;
+        font-size: 19px;
+        line-height: 23px;
+        max-width: 330px;
+        margin: 0px auto 30px auto;
+        font-family: "Dosis", sans-serif;
+        font-weight: 400;
+    }
+    a{
+        background: none;
+        color: #fff;
+        padding: 12px 0px 10px 0px;
+        border: 1px solid #fff;
+        outline: none;
+        border-radius: 7px;
+        width: 150px;
+        font-size: 15px;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 40px;
+        margin-top: 25px;
+        font-family: "Dosis", sans-serif;
+        font-weight: 400;
+        &:hover{
+            color: #fff;
+            border-color: #ffbb39;
+            cursor: pointer;
+            opacity: 1;
+        } 
+    }
+    .cs-planeta{
+        position: relative;
+        .stars {
+            animation: sparkle 1.6s infinite ease-in-out alternate;
+        }
+        
+        @keyframes sparkle {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.3;
+            }
+        }
+        .cs-snowboard {
+            width: 43px;
+            position: absolute;
+            right: 20px;
+            top: 10%;
+            animation: spin 4.5s infinite linear;
+        }
+    }
+    
+  }

@@ -6,6 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import "https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap";
+@import "https://fonts.googleapis.com/css?family=Dosis:300,400,700,800";
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -32,10 +33,12 @@
   --bs-gray-900: #212529;
   --bs-primary: #ffc477;
   --bs-secondary: #6c757d;
+  --bs-info: #fddaab;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 255, 196, 119;
   --bs-secondary-rgb: 108, 117, 125;
+  --bs-info-rgb: 253, 218, 171;
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
   --bs-white-rgb: 255, 255, 255;
@@ -2828,6 +2831,23 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: #6c757d;
 }
 
+.btn-info {
+  --bs-btn-color: #000;
+  --bs-btn-bg: #fddaab;
+  --bs-btn-border-color: #fddaab;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #fde0b8;
+  --bs-btn-hover-border-color: #fddeb3;
+  --bs-btn-focus-shadow-rgb: 215, 185, 145;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #fde1bc;
+  --bs-btn-active-border-color: #fddeb3;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #fddaab;
+  --bs-btn-disabled-border-color: #fddaab;
+}
+
 .btn-light {
   --bs-btn-color: #000;
   --bs-btn-bg: #f8f9fa;
@@ -2893,6 +2913,23 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #6c757d;
   --bs-btn-disabled-bg: transparent;
   --bs-btn-disabled-border-color: #6c757d;
+  --bs-gradient: none;
+}
+
+.btn-outline-info {
+  --bs-btn-color: #fddaab;
+  --bs-btn-border-color: #fddaab;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #fddaab;
+  --bs-btn-hover-border-color: #fddaab;
+  --bs-btn-focus-shadow-rgb: 253, 218, 171;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #fddaab;
+  --bs-btn-active-border-color: #fddaab;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fddaab;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #fddaab;
   --bs-gradient: none;
 }
 
@@ -4488,6 +4525,15 @@ textarea.form-control-lg {
   color: #34383c;
 }
 
+.alert-info {
+  --bs-alert-color: #655744;
+  --bs-alert-bg: #fff8ee;
+  --bs-alert-border-color: #fef4e6;
+}
+.alert-info .alert-link {
+  color: #514636;
+}
+
 .alert-light {
   --bs-alert-color: #636464;
   --bs-alert-bg: #fefefe;
@@ -4824,6 +4870,20 @@ textarea.form-control-lg {
   color: #fff;
   background-color: #41464b;
   border-color: #41464b;
+}
+
+.list-group-item-info {
+  color: #655744;
+  background-color: #fff8ee;
+}
+.list-group-item-info.list-group-item-action:hover, .list-group-item-info.list-group-item-action:focus {
+  color: #655744;
+  background-color: #e6dfd6;
+}
+.list-group-item-info.list-group-item-action.active {
+  color: #fff;
+  background-color: #655744;
+  border-color: #655744;
 }
 
 .list-group-item-light {
@@ -6330,6 +6390,11 @@ textarea.form-control-lg {
   background-color: RGBA(108, 117, 125, var(--bs-bg-opacity, 1)) !important;
 }
 
+.text-bg-info {
+  color: #000 !important;
+  background-color: RGBA(253, 218, 171, var(--bs-bg-opacity, 1)) !important;
+}
+
 .text-bg-light {
   color: #000 !important;
   background-color: RGBA(248, 249, 250, var(--bs-bg-opacity, 1)) !important;
@@ -6352,6 +6417,13 @@ textarea.form-control-lg {
 }
 .link-secondary:hover, .link-secondary:focus {
   color: #565e64 !important;
+}
+
+.link-info {
+  color: #fddaab !important;
+}
+.link-info:hover, .link-info:focus {
+  color: #fde1bc !important;
 }
 
 .link-light {
@@ -6797,6 +6869,11 @@ textarea.form-control-lg {
 .border-secondary {
   --bs-border-opacity: 1;
   border-color: rgba(var(--bs-secondary-rgb), var(--bs-border-opacity)) !important;
+}
+
+.border-info {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-info-rgb), var(--bs-border-opacity)) !important;
 }
 
 .border-light {
@@ -7641,6 +7718,11 @@ textarea.form-control-lg {
   color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
 }
 
+.text-info {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-info-rgb), var(--bs-text-opacity)) !important;
+}
+
 .text-light {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important;
@@ -7710,6 +7792,11 @@ textarea.form-control-lg {
 .bg-secondary {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-info {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-light {
@@ -10381,6 +10468,14 @@ textarea.form-control-lg {
     stroke-dashoffset: 0;
   }
 }
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -10431,12 +10526,12 @@ button:hover {
 }
 .index .index-title {
   min-height: 200px;
-  width: clamp(200px, 40%, 400px);
+  width: clamp(300px, 40%, 500px);
 }
 .index .index-title .st0 {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  stroke: white;
+  stroke: #ffc477;
   stroke-width: 2px;
   animation: phrase2 5s forwards;
 }
@@ -10457,12 +10552,13 @@ button:hover {
   align-items: center;
   justify-content: center;
 }
-.home .home-presentation .apple-store-button {
+.home .home-presentation a {
   width: clamp(200px, 40%, 350px);
+}
+.home .home-presentation .apple-store-button {
   cursor: pointer;
 }
 .home .home-presentation .google-play-button {
-  width: clamp(200px, 40%, 350px);
   cursor: pointer;
 }
 
@@ -10473,6 +10569,7 @@ button:hover {
 }
 
 .cabecera {
+  border-bottom: 1px hsla(14, 33%, 32%, 0.4) solid;
   position: fixed;
   background-color: white;
   display: flex;
@@ -10804,6 +10901,12 @@ button:hover {
   text-decoration: none;
   color: #276873;
 }
+.cs-footer .cs-footer-faq-list button {
+  border: none;
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: #276873;
+}
 .cs-footer p {
   text-align: center;
 }
@@ -10818,6 +10921,84 @@ button:hover {
 .contacto textarea:focus {
   border-color: #fb9e25;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 7px #ffc477;
+}
+
+.cs-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #1D1C1B;
+  color: #ffc477;
+}
+.cs-container h1, .cs-container .h1 {
+  text-align: center;
+  color: #fff;
+  font-family: "Dosis", sans-serif;
+  font-size: clamp(6rem, 7vw + 2rem, 15rem);
+  margin-bottom: 0px;
+  font-weight: 800;
+}
+.cs-container h2, .cs-container .h2 {
+  text-align: center;
+  font-size: 19px;
+  line-height: 23px;
+  max-width: 330px;
+  margin: 0px auto 30px auto;
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+}
+.cs-container h3, .cs-container .h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 19px;
+  line-height: 23px;
+  max-width: 330px;
+  margin: 0px auto 30px auto;
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+}
+.cs-container a {
+  background: none;
+  color: #fff;
+  padding: 12px 0px 10px 0px;
+  border: 1px solid #fff;
+  outline: none;
+  border-radius: 7px;
+  width: 150px;
+  font-size: 15px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 40px;
+  margin-top: 25px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+}
+.cs-container a:hover {
+  color: #fff;
+  border-color: #ffbb39;
+  cursor: pointer;
+  opacity: 1;
+}
+.cs-container .cs-planeta {
+  position: relative;
+}
+.cs-container .cs-planeta .stars {
+  animation: sparkle 1.6s infinite ease-in-out alternate;
+}
+@keyframes sparkle {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+.cs-container .cs-planeta .cs-snowboard {
+  width: 43px;
+  position: absolute;
+  right: 20px;
+  top: 10%;
+  animation: spin 4.5s infinite linear;
 }
 
 /*# sourceMappingURL=styles.css.map */
