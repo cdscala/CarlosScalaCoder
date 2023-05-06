@@ -10586,7 +10586,9 @@ button:hover {
 }
 
 .cs-navbar-list {
-  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -10634,6 +10636,7 @@ button:hover {
   position: relative;
   height: 50px;
   width: 60px;
+  z-index: 1001;
 }
 .burger-button-container .burger-button-burger {
   position: absolute;
@@ -10823,16 +10826,44 @@ button:hover {
     position: absolute;
     right: 1px;
     top: 55px;
-    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 0;
     min-height: 200px;
     min-width: 150px;
     max-width: 150px;
     z-index: 1001;
     transform: translateX(150px);
     transition: transform 500ms;
+  }
+  .cs-navbar-list .cs-a {
+    font-family: "Oxygen", sans-serif;
+    line-height: 1.6;
+    font-size: 1.125rem;
+    filter: blur(0) !important;
+    color: #1D1C1B;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  .cs-navbar-list .cs-navbar-item {
+    padding: 3px;
+    width: 100%;
+  }
+  .cs-navbar-list .cs-navbar-item:hover {
+    background-color: #408c99;
+  }
+  .cs-navbar-list .cs-navbar-item:hover .cs-a {
+    color: #ffffff;
+  }
+  .cs-navbar-list .cs-active {
+    background-color: #408c99;
+  }
+  .cs-navbar-list .cs-active .cs-a {
+    color: #ffffff;
   }
   .cs-navbar-list-active .cs-navbar-list {
     transform: translateX(0);

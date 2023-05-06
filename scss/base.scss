@@ -143,7 +143,9 @@ button:hover{
 	margin-left: 15px;
 }
 .cs-navbar-list {
-	list-style: none;
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -393,17 +395,46 @@ button:hover{
 		position: absolute;
 		right: 1px;
         top:55px;
-		list-style: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+        gap:0;
 		min-height: 200px;
 		min-width: 150px;
 		max-width: 150px;
 		z-index: 1001;
 		transform: translateX(150px);
 		transition: transform 500ms;
-	}
+        .cs-a {
+            font-family: $font-family_1;
+            line-height: 1.6;
+            font-size: 1.125rem;
+			filter: blur(0) !important;
+			color: $color_1;
+			font-weight: 400;
+			text-decoration: none;
+	    }
+        .cs-navbar-item{
+            padding: 3px;
+            width: 100%;
+            &:hover {
+				background-color: $background-color_3;
+            .cs-a {
+                color: $color_2;
+                }
+			}
+        }
+        .cs-active {
+            background-color: $background-color_3;
+            .cs-a {
+                color: $color_2;
+            }
+            
+        }
+    }
 	.cs-navbar-list-active {
 		.cs-navbar-list {
 			transform: translateX(0);
