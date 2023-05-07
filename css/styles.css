@@ -11016,6 +11016,9 @@ button:hover {
 .cs-container .cs-planeta {
   position: relative;
 }
+.cs-container .cs-planeta #planet {
+  max-height: 60vh;
+}
 .cs-container .cs-planeta .stars {
   animation: sparkle 1.6s infinite ease-in-out alternate;
 }

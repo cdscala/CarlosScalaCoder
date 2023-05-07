@@ -599,6 +599,10 @@ button:hover{
     }
     .cs-planeta{
         position: relative;
+        #planet{
+            max-height: 60vh;
+        }
+        
         .stars {
             animation: sparkle 1.6s infinite ease-in-out alternate;
         }
