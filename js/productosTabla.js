@@ -61,8 +61,9 @@ function generateTable(container, data) {
         childnode.appendChild(document.createTextNode('Disponibles: '+element.Cantidad + ' Clase: '+ element.Tipo))
         node.appendChild(childnode)
         //boton
-        childnode = document.createElement('button')
+        childnode = document.createElement('a')
         childnode.className = 'btn btn-primary'
+        childnode.href = "./error.html"
         childnode.appendChild(document.createTextNode('Agregar'))
         node.appendChild(childnode)
         //
