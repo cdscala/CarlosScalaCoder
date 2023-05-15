@@ -24,6 +24,7 @@ function generateTable(container, data) {
         node = document.createElement('img')
         node.className = 'card-img-top'
         node.alt = element.Nombre
+        node.title = element.Nombre
         node.src = element['Image']
         card.appendChild(node)
         //resto
