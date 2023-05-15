@@ -1,0 +1,76 @@
+
+$fuente-principal: 'Oxygen', sans-serif;
+$fuente-secundaria: Arial;
+$accordion--_button-size: 3rem;
+$accordion--_panel-padding: 0.75rem;
+$accordion--_panel-gap: 1rem;
+
+$map-flex:(
+    flex: flex,
+    row: row,
+    column: column,
+    space-around: space-around,
+    space-between: space-between,
+    space-evenly: space-evenly,
+    space-center: center,
+    align-items-stretch: stretch
+);
+
+$fuentes:(
+    thin:100,
+    light:300,
+    regular:400,
+    medium:500,
+    bold:700,
+    black:900
+);
+
+$sizes:(
+    catorce: 14px,
+    16 : 16px,
+    20 :20px,
+    10 : 10px
+);
+
+$estilos: (
+  color: #5936d9,
+  centro: center,
+  tFuente: 35px,
+  1rem : 1rem
+);
+
+$theme-colors: (
+  "primary": #ffc477,
+  secondary: #6c757d, 
+  success : #408c99,
+  info: #fddaab,
+  warning: #fb9e25,
+  danger: #E44032,
+  light: #f8f9fa,
+  dark: #1D1C1B,
+  
+);
+$colores-fuente:(
+    blanco:white,
+    oscuro:rgb(2,2,2),
+    claro: hsl(0 20% 99% / 1),
+);
+
+
+$bordes: (
+    borde-primario: 1px hsla(14, 33%, 32%, 0.4) solid,
+    borde-secundario: 1px #fb9e25 solid,
+);
+
+$bg-color:(
+    blanco: white,
+    blanco-sucio:#f8f9fa,
+    negro: black,
+    primario: #ffc477,
+    primario-variante: #fb9e25,
+    secundario:  #6c757d,
+    hover: #C7B19E,
+    opuesto: #408c99,
+    oscuro-translucido-1: hsla(41, 100%, 77%, 0.25),
+    oscuro-translucido-2: hsla(14, 33%, 32%, 0.4),
+);

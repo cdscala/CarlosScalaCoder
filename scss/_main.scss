@@ -1,0 +1,82 @@
+.cs-container-primary{
+    @include make-container(20px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: map-get($theme-colors, primary );
+}
+
+.index{
+    @include create-flex(column,right,flex-end,0,nowrap);
+    background-color: map-get($bg-color, oscuro-translucido-2 );
+	background-image: url("../assets/img/snowboard-background.jpg");
+	background-size: cover;
+    background-position: center;
+    height:50vh;
+    .index-title{
+        min-height: 200px;
+        width: clamp(300px, 40%, 500px);
+        .st0{
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            stroke: map-get($bg-color, primario );
+            stroke-width: 2px;
+            animation: phrase2 5s forwards;
+        }
+    }
+}
+.home {
+    @include create-flex(row,center,center,3rem,wrap);
+	height: 60vh;
+	background: linear-gradient(330deg, rgba(255,255,255,1) 0%, rgba(245,243,243,1) 67%, rgba(255,218,136,0.72) 91%);
+    .home-presentation {
+        @include create-flex(column,center,center,0,nowrap);
+        
+        a{
+            width: clamp(200px, 40%, 350px);
+        }
+        .apple-store-button{
+            cursor:pointer;
+        }
+        .google-play-button{
+            cursor:pointer;
+        }
+    }
+}
+
+.home-2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+	background-color: map-get($bg-color, oscuro-translucido-2 );
+	background-image: url("../assets/img/cafe.svg");
+	background-size: cover;
+}
+
+.contacto{
+    @include create-flex(column,center,center,15px,nowrap);
+    background-color: transparent;
+    .cs-form{
+        width: 80vw;
+    }
+    input:focus{
+        border-color:map-get($bg-color, primario-variante) ;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px map-get($bg-color, primario);
+    }
+    textarea:focus{
+        border-color:map-get($bg-color, primario-variante) ;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 7px map-get($bg-color, primario);
+    }
+    
+}
+
+.btn{
+    @include boton(map-get($bg-color,primario),map-get($bg-color,hover), map-get($bordes,borde-secundario)) ;
+}
+
+.card-img-top{
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
+}
+.map{
+    width:100%; 
+    height:60vh;
+}
