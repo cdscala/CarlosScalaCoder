@@ -1,0 +1,240 @@
+.cabecera {
+    border-bottom: map-get($bordes, borde-primario );
+	background-color: map-get($bg-color, blanco );
+    position: sticky;
+    top:0;
+    @include create-flex(row,space-between,center,0,nowrap);
+	width: 100%;
+	min-height: 65px;
+	z-index: 1000;
+}
+.company-icon {
+	margin-left: 15px;
+}
+.cs-navbar-list {
+    @include create-flex(row,space-between,center,15px,nowrap);
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+	min-width: 500px;
+	min-height: 30px;
+	z-index: 1001;
+	.cs-navbar-item {
+        @include create-flex(column,center,center,0,nowrap);
+		.cs-a {
+            font-family: $fuente-principal;
+            line-height: 1.6;
+            font-size: 1.125rem;
+			filter: blur(1px);
+			color: map-get($theme-colors, dark );
+			font-weight: 400;
+			text-decoration: none;
+			font-size: 1.2rem;
+			transition: filter .5s;
+			&:hover {
+				filter: blur(0);
+				color: map-get($theme-colors, dark );
+			}
+		}
+	}
+	.cs-active {
+		.cs-a {
+			filter: blur(0px);
+			color: map-get($colores-fuente, oscuro );
+		}
+	}
+}
+.burger-button-container {
+	cursor: pointer;
+    @include create-flex(column,center,center,0,nowrap);
+	position: relative;
+	height: 50px;
+	width: 60px;
+    z-index: 1001;
+    .burger-button-burger {
+        position: absolute;
+        filter: url(#gooeyness);
+    }
+    .burger-button-plates {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        max-height: 160px;
+    }
+    .burger-button-plate {
+        position: relative;
+        height: 60px;
+        width: 60px;
+        .burger-button-line1 {
+            stroke-dasharray: 21 185.62753295898438;
+            transition-delay: 0;
+        }
+        .burger-button-line2 {
+            stroke-dasharray: 21 178.6514129638672;
+            transition-delay: 30ms;
+        }
+        .burger-button-line3 {
+            stroke-dasharray: 21 197.92425537109375;
+            transition-delay: 60ms;
+        }
+        .burger-button-line4 {
+            stroke-dasharray: 21 190.6597137451172;
+            transition-delay: 90ms;
+        }
+        .burger-button-line5 {
+            stroke-dasharray: 21 208.52874755859375;
+            transition-delay: 120ms;
+        }
+        .burger-button-line6 {
+            stroke-dasharray: 21 186.59703063964844;
+            transition-delay: 150ms;
+        }
+    }
+    .burger-button-x {
+        position: absolute;
+        transform: scale(0);
+        transition: transform 400ms;
+        .burger-button-line {
+            stroke-width: 5.5px;
+        }
+    }
+    .burger-button-line {
+        fill: none;
+        stroke: #1D1C1B;
+        stroke-width: 6px;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        transform-origin: 50%;
+        transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms, stroke 500ms 200ms;
+    }
+    .burger-button-active.burger-button-plate {
+        .burger-button-line1 {
+            stroke-dasharray: 5 185.62753295898438;
+            stroke-dashoffset: -141px;
+        }
+        .burger-button-line2 {
+            stroke-dasharray: 5 178.6514129638672;
+            stroke-dashoffset: -137px;
+        }
+        .burger-button-line3 {
+            stroke-dasharray: 5 197.92425537109375;
+            stroke-dashoffset: -176px;
+        }
+        .burger-button-line4 {
+            stroke-dasharray: 5 190.6597137451172;
+            stroke-dashoffset: -159px;
+        }
+        .burger-button-line5 {
+            stroke-dasharray: 5 208.52874755859375;
+            stroke-dashoffset: -139px;
+        }
+        .burger-button-line6 {
+            stroke-dasharray: 5 186.59703063964844;
+            stroke-dashoffset: -176px;
+        }
+        .burger-button-x {
+            transition: transform 400ms 250ms;
+        }
+    }
+    .burger-button-active {
+        .burger-button-x {
+            transform: scale(1);
+            transition: transform 400ms 350ms;
+        }
+        .burger-button-burger {
+            .burger-button-line {
+                stroke: #FFFFFF;
+            }
+        }
+    }
+}
+
+@media (max-width: 44.999em) {
+	.cs-navbar-list {
+		overflow: hidden;
+		background-color: map-get($bg-color, blanco);
+        border: map-get($bordes, borde-secundario);
+        border-radius: 8px;
+		position: absolute;
+		right: 1px;
+        top:55px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        @include create-flex(column,flex-start,flex-start,0,nowrap);
+		min-height: 200px;
+		min-width: 150px;
+		max-width: 150px;
+		z-index: 1001;
+		transform: translateX(150px);
+		transition: transform 500ms;
+        .cs-a {
+            width: 100%;
+            height: 100%;
+            font-family: $fuente-principal;
+            line-height: 1.6;
+            font-size: 1.125rem;
+            text-align: center;
+			filter: blur(0) !important;
+			color: map-get($theme-colors, dark );
+			font-weight: 400;
+			text-decoration: none;
+	    }
+        .cs-navbar-item{
+            padding: 3px;
+            width: 100%;
+            &:hover {
+				background-color: map-get($bg-color, opuesto);
+            .cs-a {
+                color: map-get($colores-fuente, blanco );
+                }
+			}
+        }
+        .cs-active {
+            background-color: map-get($bg-color, opuesto);
+            .cs-a {
+                color: map-get($colores-fuente, blanco );
+            }
+            
+        }
+    }
+	.cs-navbar-list-active {
+		.cs-navbar-list {
+			transform: translateX(0);
+		}
+	}
+	.accordion-title {
+		&::after {
+			content: '';
+			position: absolute;
+			left: calc(($accordion--_panel-gap + $accordion--_button-size) * -1);
+			width: calc(100% + ($accordion--_button-size * 2));
+			height: $accordion--_button-size;
+			background: hsl(0 0% 0% / 0.5);
+			z-index: -1;
+			border-radius: 100vw;
+		}
+	}
+}
+@media (min-width: 45em) {
+	.burger-button-container {
+		display: none;
+	}
+	.accordion {
+		flex-direction: row;
+		height: 30rem;
+	}
+    .index{
+        height:80vh;
+    }
+}
+@media (prefers-reduced-motion: no-preference) {
+	.accordion-panel {
+		transition: flex-basis 500ms, flex-grow 500ms;
+		&:has([aria-expanded="true"]) {
+			p {
+				transition: transform 500ms 500ms, opacity 500ms 500ms;
+			}
+		}
+	}
+}
